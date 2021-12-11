@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t 1234567892018/react-test -f ./client/Dockerfile
+  - docker build -t 1234567892018/react-test -f ./client/Dockerfile ./client
 
 
 script:
