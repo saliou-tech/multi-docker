@@ -18,7 +18,6 @@ RUN curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - \
   && apt-get autoremove \
   && apt-get install -y nodejs
 
-RUN apt-get update && apt-get install -y npm
 
 #RUN npm install
 EXPOSE 3000
