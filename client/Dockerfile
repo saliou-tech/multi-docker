@@ -1,5 +1,5 @@
 FROM node:alpine as  builder
-
+RUN apk add --update nodejs npm
 WORKDIR '/app'
 
 COPY ./package.json ./
