@@ -12,6 +12,10 @@ COPY . .
 RUN npm run build
 
 FROM nginx
+
+RUN apk add --update nodejs npm
+
+
 #RUN npm install
 EXPOSE 3000
 

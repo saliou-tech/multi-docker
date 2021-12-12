@@ -8,7 +8,7 @@ before_install:
 
 
 script:
-  - docker run 1234567892018/react-test npm  test -- --coverage
+  - docker run  1234567892018/react-test npm test -- --coverage
 
 after_success:
   - docker build 1234567892018/multi-client ./client
