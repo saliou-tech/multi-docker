@@ -13,7 +13,6 @@ script:
     #Log to docker hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     #TAKE IMAGE AND PUSH IT DOCKER HUB
-
 after_success:
 #Log to docker hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
