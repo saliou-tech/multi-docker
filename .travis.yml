@@ -5,8 +5,8 @@ services:
 
 before_install:
   - docker build -t 1234567892018/react-test -f ./client/Dockerfile  ./client
-#script:
- # - docker run  1234567892018/react-test npm test -- --coverage
+script:
+  - docker run  1234567892018/react-test npm test -- --coverage
 after_success:
   - docker build 1234567892018/multi-client ./client
   - docker build 1234567892018/multi-nginx ./nginx
