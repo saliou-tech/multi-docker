@@ -6,10 +6,10 @@ services:
 before_install:
   - docker build -t 1234567892018/react-test -f ./client/Dockerfile  ./client
 script:
-  - docker build -t 1234567892018/multi-client  -f ./client/Dockerfile ./client
+  - docker build -t 1234567892018/multi-client  -f ./client/Dockerfile   ./client
   - docker build -t 1234567892018/multi-nginx  -f  ./nginx/Dockerfile   ./nginx
-  - docker build -t 1234567892018/multi-server -f  ./nginx/Dockerfile   ./server
-  - docker build -t 1234567892018/multi-worker -f  ./nginx/Dockerfile   ./worker
+  - docker build -t 1234567892018/multi-server -f  ./server/Dockerfile   ./server
+  - docker build -t 1234567892018/multi-worker -f  ./worker/Dockerfile   ./worker
     #Log to docker hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     #TAKE IMAGE AND PUSH IT DOCKER HUB
