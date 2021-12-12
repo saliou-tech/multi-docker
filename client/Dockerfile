@@ -21,7 +21,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION}.x | bash - \
 
 #RUN npm install
 EXPOSE 3000
-
+COPY ./package.json ./
 COPY ./nginx/default.conf  /etc/nginx/conf.d/default.conf
 
 COPY --from=builder /app/build  /usr/share/nginx/html
