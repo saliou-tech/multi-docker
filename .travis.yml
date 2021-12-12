@@ -13,11 +13,7 @@ script:
     #Log to docker hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     #TAKE IMAGE AND PUSH IT DOCKER HUB
-  - docker push  1234567892018/multi-client
-  - docker push  1234567892018/multi-nginx
-  - docker push  1234567892018/multi-server
-  - docker push  1234567892018/multi-worker
-  - docker run  1234567892018/react-test
+
 after_success:
   - docker build 1234567892018/multi-client ./client
   - docker build 1234567892018/multi-nginx ./nginx
