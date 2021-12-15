@@ -14,9 +14,6 @@ script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     #TAKE IMAGE AND PUSH IT DOCKER HUB
 after_success:
-#Log to docker hub
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-#TAKE IMAGE AND PUSH IT DOCKER HUB
   - docker push  1234567892018/myrepo:multi-client
   - docker push  1234567892018/myrepo:multi-nginx
   - docker push  1234567892018/myrepo:multi-server
